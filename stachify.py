@@ -26,7 +26,6 @@ if __name__ == "__main__":
     i = 0
     while True:
         image = cv.QueryFrame(capture)
-        # Only run the Detection algorithm every 5 frames to improve performance
         if i%3==0:
             faces = detect_faces(image)
         mask = cv.LoadImage("black-mustache-hi.png")
